@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    tools:context=".MainActivity"
+    android:background="#f3f3f3">
+
+
+    <TextView
+        android:id="@+id/tvPreRes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:maxLines="1"
+        android:textColor="#848484"
+        android:padding="8dp"
+        android:gravity="end"
+        />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:padding="8dp"
+        android:gravity="center_vertical|end"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPreRes"
+        android:text="0"/>
+
+    <ImageButton
+        android:id="@+id/btnSqr"
+        style="@style/NoPressButton_ToanTu"
+        android:src="@drawable/xmu2"
+        android:padding="38dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFraction"
+        app:layout_constraintEnd_toStartOf="@+id/btnSqrt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnFraction"
+        app:layout_constraintTop_toTopOf="@+id/btnFraction"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btnFraction"
+        style="@style/NoPressButton_ToanTu"
+        android:scaleType="centerCrop"
+        android:padding="20dp"
+        android:src="@drawable/frac"
+        android:layout_marginVertical="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn7"
+        app:layout_constraintEnd_toStartOf="@+id/btnSqr"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPercent" />
+
+    <ImageButton
+        android:id="@+id/btnSqrt"
+        style="@style/NoPressButton_ToanTu"
+        android:src="@drawable/square_root_of_x"
+        android:scaleType="centerCrop"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFraction"
+        app:layout_constraintEnd_toStartOf="@+id/btnDiv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSqr"
+        app:layout_constraintTop_toTopOf="@+id/btnFraction" />
+
+    <ImageButton
+        android:id="@+id/btnDiv"
+        style="@style/NoPressButton_ToanTu"
+        android:src="@drawable/division"
+        android:scaleType="centerCrop"
+        android:padding="34dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFraction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSqrt"
+        app:layout_constraintTop_toTopOf="@+id/btnFraction" />
+
+    <ImageButton
+        android:id="@+id/btnDel"
+        style="@style/NoPressButton_ToanTu"
+        android:src="@drawable/clear"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPercent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnC"
+        app:layout_constraintTop_toTopOf="@+id/btnPercent" />
+
+    <ImageButton
+        android:id="@+id/btnCE"
+        android:src="@drawable/ce"
+        android:scaleType="centerCrop"
+        android:padding="20dp"
+        style="@style/NoPressButton_ToanTu"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPercent"
+        app:layout_constraintEnd_toStartOf="@+id/btnC"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnPercent"
+        app:layout_constraintTop_toTopOf="@+id/btnPercent" />
+
+    <ImageButton
+        android:id="@+id/btnPercent"
+        android:src="@drawable/percent"
+        android:scaleType="centerCrop"
+        android:padding="35dp"
+        style="@style/NoPressButton_ToanTu"
+        android:layout_marginVertical="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnFraction"
+        app:layout_constraintEnd_toStartOf="@+id/btnCE"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult" />
+
+    <ImageButton
+        android:id="@+id/btnC"
+        style="@style/NoPressButton_ToanTu"
+        android:scaleType="centerCrop"
+        android:padding="35dp"
+        android:src="@drawable/c"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPercent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCE"
+        app:layout_constraintTop_toTopOf="@+id/btnPercent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btnMulti"
+        style="@style/NoPressButton_ToanTu"
+        android:src="@drawable/multiple"
+        android:scaleType="centerCrop"
+        android:padding="34dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn9"
+        app:layout_constraintTop_toTopOf="@+id/btn7" />
+
+    <Button
+        android:id="@+id/btn8"
+        style="@style/NoPressButton"
+        android:text="8"
+        app:layout_constraintBottom_toBottomOf="@+id/btn7"
+        app:layout_constraintEnd_toStartOf="@+id/btn9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn7"
+        app:layout_constraintTop_toTopOf="@+id/btn7" />
+
+    <Button
+        android:id="@+id/btn4"
+        style="@style/NoPressButton"
+        android:text="4"
+        android:layout_marginVertical="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        app:layout_constraintEnd_toStartOf="@+id/btn5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn7" />
+
+    <Button
+        android:id="@+id/btn5"
+        style="@style/NoPressButton"
+        android:text="5"
+        app:layout_constraintBottom_toBottomOf="@+id/btn4"
+        app:layout_constraintEnd_toStartOf="@+id/btn6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn4"
+        app:layout_constraintTop_toTopOf="@+id/btn4" />
+
+    <Button
+        android:id="@+id/btn6"
+        style="@style/NoPressButton"
+        android:text="6"
+        app:layout_constraintBottom_toBottomOf="@+id/btn4"
+        app:layout_constraintEnd_toStartOf="@+id/btnMinus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn5"
+        app:layout_constraintTop_toTopOf="@+id/btn4" />
+
+    <ImageButton
+        android:id="@+id/btnMinus"
+        style="@style/NoPressButton_ToanTu"
+        android:src="@drawable/minus"
+        android:scaleType="centerCrop"
+        android:padding="34dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn6"
+        app:layout_constraintTop_toTopOf="@+id/btn4" />
+
+    <Button
+        android:id="@+id/btn7"
+        style="@style/NoPressButton"
+        android:layout_marginVertical="2dp"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/btn4"
+        app:layout_constraintEnd_toStartOf="@+id/btn8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFraction" />
+
+    <Button
+        android:id="@+id/btn2"
+        style="@style/NoPressButton"
+        android:text="2"
+        app:layout_constraintBottom_toBottomOf="@+id/btn1"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toTopOf="@+id/btn1" />
+
+    <Button
+        android:id="@+id/btn1"
+        style="@style/NoPressButton"
+        android:text="1"
+        android:layout_marginVertical="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnDoiDau"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn4" />
+
+    <ImageButton
+        android:id="@+id/btnPlus"
+        style="@style/NoPressButton_ToanTu"
+        android:src="@drawable/plus"
+        android:scaleType="centerCrop"
+        android:padding="34dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintTop_toTopOf="@+id/btn1" />
+
+    <Button
+        android:id="@+id/btn3"
+        style="@style/NoPressButton"
+        android:text="3"
+        app:layout_constraintBottom_toBottomOf="@+id/btn1"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toTopOf="@+id/btn1" />
+
+    <Button
+        android:id="@+id/btnDoiDau"
+        style="@style/NoPressButton"
+        android:text="+/-"
+        android:layout_marginVertical="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    <Button
+        android:id="@+id/btnCham"
+        style="@style/NoPressButton"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="@+id/btnDoiDau"
+        app:layout_constraintEnd_toStartOf="@+id/btnCaculate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn0"
+        app:layout_constraintTop_toTopOf="@+id/btnDoiDau" />
+
+    <ImageButton
+        android:id="@+id/btnCaculate"
+        style="@style/NoPressButton_ToanTu_caculate"
+        android:src="@drawable/equal"
+        android:scaleType="centerCrop"
+        android:padding="34dp"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDoiDau"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnCham"
+        app:layout_constraintTop_toTopOf="@+id/btnDoiDau"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn0"
+        style="@style/NoPressButton"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDoiDau"
+        app:layout_constraintEnd_toStartOf="@+id/btnCham"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnDoiDau"
+        app:layout_constraintTop_toTopOf="@+id/btnDoiDau" />
+
+    <Button
+        android:id="@+id/btn9"
+        style="@style/NoPressButton"
+        android:text="9"
+        app:layout_constraintBottom_toBottomOf="@+id/btn7"
+        app:layout_constraintEnd_toStartOf="@+id/btnMulti"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn8"
+        app:layout_constraintTop_toTopOf="@+id/btn7" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
