@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dp">
+
+        <Button
+            android:id="@+id/btnName"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_background_name"
+            android:fontFamily="@font/headland_one"
+            android:textSize="32sp"
+            tools:text="S" />
+
+        <TextView
+            android:id="@+id/tvSender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingVertical="6dp"
+            android:layout_toRightOf="@id/btnName"
+            android:fontFamily="@font/headland_one"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            tools:text="Chris Path" />
+
+        <TextView
+            android:id="@+id/tvTimeReceiving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvSender"
+            android:layout_alignTop="@id/tvSender"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/headland_one"
+            android:paddingHorizontal="20dp"
+            android:textSize="12sp"
+            tools:text="12:34 PM" />
+
+        <TextView
+            android:id="@+id/tvTitleMail"
+            android:paddingVertical="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSender"
+            android:layout_alignStart="@id/tvSender"
+            android:layout_alignEnd="@id/tvContentMail"
+            android:ellipsize="end"
+            android:fontFamily="@font/headland_one"
+            android:maxLines="1"
+            android:textSize="14sp"
+            tools:text="Vi du ve tieu de cua email Vi du ve noi dung cua email" />
+
+        <TextView
+            android:id="@+id/tvContentMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitleMail"
+            android:layout_alignLeft="@id/tvSender"
+            android:layout_toStartOf="@id/ivFavorite"
+            android:ellipsize="end"
+            android:paddingVertical="4dp"
+            android:fontFamily="@font/headland_one"
+            android:maxLines="1"
+            android:textSize="14sp"
+            tools:text="Vi du ve noi dung cua email Vi du ve noi dung cua email" />
+
+        <ImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tvContentMail"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="4dp"
+            app:srcCompat="@android:drawable/star_big_off" />
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
